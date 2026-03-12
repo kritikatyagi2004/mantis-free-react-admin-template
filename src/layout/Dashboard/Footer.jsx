@@ -2,33 +2,80 @@
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
 
 export default function Footer() {
   return (
-    <Stack
-      direction={{ xs: 'column', sm: 'row' }}
-      sx={{ gap: 1.5, alignItems: 'center', justifyContent: 'space-between', p: '24px 16px 0px', mt: 'auto' }}
-    >
-      <Typography variant="caption">
-        &copy; All rights reserved{' '}
-        <Link href="https://codedthemes.com/" target="_blank" underline="hover">
-          CodedThemes
-        </Link>
-      </Typography>
-      <Stack direction="row" sx={{ gap: 1.5, alignItems: 'center', justifyContent: 'space-between' }}>
-        <Link href="https://codedthemes.com/hire-us/" target="_blank" variant="caption" color="text.primary">
-          Hire us
-        </Link>
-        <Link href="https://mui.com/store/license/" target="_blank" variant="caption" color="text.primary">
-          License
-        </Link>
-        <Link href="https://mui.com/store/terms/" target="_blank" variant="caption" color="text.primary">
-          Terms
-        </Link>
-        <Link href="https://links.codedthemes.com/dAAOP" target="_blank" variant="caption" color="text.primary">
-          Figma Design System
-        </Link>
+    <Box sx={{ mt: 'auto', px: 2, pb: 2 }}>
+      <Divider sx={{ mb: 2 }} />
+
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={2}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        {/* Left Section */}
+        <Typography variant="caption" color="text.secondary">
+          © {new Date().getFullYear()} All rights reserved by{' '}
+          <Link
+            href="https://myinboxmedia.com"
+            target="_blank"
+            underline="hover"
+            sx={{ fontWeight: 600 }}
+          >
+            MyInboxMedia
+          </Link>
+        </Typography>
+
+        {/* Right Section */}
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems="center"
+        >
+          {/* <Link
+            href="https://myinboxmedia.com"
+            target="_blank"
+            variant="caption"
+            color="text.primary"
+            underline="hover"
+          >
+            Website
+          </Link> */}
+
+          {/* <Link
+            href="https://myinboxmedia.com/contact"
+            target="_blank"
+            variant="caption"
+            color="text.primary"
+            underline="hover"
+          >
+            Contact
+          </Link> */}
+
+          {/* <Link
+            href="https://myinboxmedia.com/privacy-policy"
+            target="_blank"
+            variant="caption"
+            color="text.primary"
+            underline="hover"
+          >
+            Privacy Policy
+          </Link> */}
+
+          {/* <Link
+            href="https://myinboxmedia.com/terms"
+            target="_blank"
+            variant="caption"
+            color="text.primary"
+            underline="hover"
+          >
+            Terms
+          </Link> */}
+        </Stack>
       </Stack>
-    </Stack>
+    </Box>
   );
 }
